@@ -63,6 +63,12 @@ $ touch test.txt
 .##.
 ....
 ```
+
+```bash
+#Then run:
+$ ./fillit test.txt
+```
+
 ## Output:
 
 ```bash
