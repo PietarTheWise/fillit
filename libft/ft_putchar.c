@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kceder <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: pnoutere <pnoutere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 13:26:52 by kceder            #+#    #+#             */
-/*   Updated: 2021/11/17 13:28:29 by kceder           ###   ########.fr       */
+/*   Created: 2021/11/17 10:55:32 by pnoutere          #+#    #+#             */
+/*   Updated: 2021/11/29 13:17:34 by pnoutere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+void	ft_putchar(char ch)
 {
-	write(1, &c, 1);
+	write(1, &ch, 1);
 }

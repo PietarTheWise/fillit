@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kceder <kceder@student.42.fr>              +#+  +:+       +#+         #
+#    By: pnoutere <pnoutere@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/11/03 10:22:12 by kceder            #+#    #+#              #
-#    Updated: 2022/02/07 16:35:51 by kceder           ###   ########.fr        #
+#    Created: 2021/11/26 15:50:48 by pnoutere          #+#    #+#              #
+#    Updated: 2022/09/30 15:39:46 by pnoutere         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ ft_strlcat.c ft_strlen.c ft_strmap.c ft_strmapi.c ft_strncat.c ft_strncmp.c\
 ft_strncpy.c ft_strnequ.c ft_strnew.c ft_strnstr.c ft_strrchr.c ft_strsplit.c\
 ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c ft_strclen.c\
 ft_variant_strcmp.c ft_variant_strncmp.c ft_free_array.c ft_word_length.c ft_nbrlen.c \
-ft_new_array.c get_next_line.c
+ft_new_array.c ft_abs.c get_next_line.c
 OBJECTS = $(SRCS:.c=.o)
 
 all: $(NAME)

@@ -3,30 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kceder <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: pnoutere <pnoutere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 13:10:22 by kceder            #+#    #+#             */
-/*   Updated: 2021/12/02 14:22:33 by kceder           ###   ########.fr       */
+/*   Created: 2021/11/15 13:11:47 by pnoutere          #+#    #+#             */
+/*   Updated: 2021/12/02 17:20:45 by pnoutere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static char	**ft_free_arr(char **array)
-{
-	int	i;
-
-	i = 0;
-	while (array[i])
-	{
-		free(array[i]);
-		array[i] = NULL;
-		i++;
-	}
-	free(array);
-	array = NULL;
-	return (array);
-}
 
 static int	ft_word_count(char const *s, char c)
 {
@@ -46,7 +30,23 @@ static int	ft_word_count(char const *s, char c)
 	return (count);
 }
 
-static int	ft_start_point(const char *s, char c, int i)
+static char	**ft_free_arr(char **array)
+{
+	int	i;
+
+	i = 0;
+	while (array[i])
+	{
+		free(array[i]);
+		array[i] = NULL;
+		i++;
+	}
+	free(array);
+	array = NULL;
+	return (array);
+}
+
+static int	find_start(char const *s, char c, int i)
 {
 	while (s[i] == c)
 		i++;
@@ -69,8 +69,8 @@ char	**ft_strsplit(char const *s, char c)
 	i = 0;
 	while (ft_word_count(s, c) > j)
 	{
-		start = ft_start_point(s, c, i);
-		i = start;
+		i = find_start(s, c, i);
+		start = i;
 		while (s[i] && s[i] != c)
 			i++;
 		str[j] = ft_strsub(s, start, i - start);

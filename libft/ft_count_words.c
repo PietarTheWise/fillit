@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_count_words.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pnoutere <pnoutere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/24 12:38:08 by pnoutere          #+#    #+#             */
-/*   Updated: 2021/11/29 13:17:53 by pnoutere         ###   ########.fr       */
+/*   Created: 2021/12/02 13:44:01 by pnoutere          #+#    #+#             */
+/*   Updated: 2021/12/02 17:29:22 by pnoutere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+int	ft_count_words(char const *s, char c)
 {
-	if (lst && f)
+	int	count;
+	int	i;
+
+	count = 0;
+	i = 0;
+	while (s[i])
 	{
-		while (lst)
-		{
-			f(lst);
-			lst = lst->next;
-		}	
+		if (i == 0 && s[0] != c)
+			count++;
+		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
+			count++;
+		i++;
 	}
+	return (count);
 }

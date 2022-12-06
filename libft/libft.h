@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   libft.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kceder <kceder@student.42.fr>              +#+  +:+       +#+        */
+/*   By: pnoutere <pnoutere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 10:56:40 by kceder            #+#    #+#             */
-/*   Updated: 2022/02/07 17:49:28 by kceder           ###   ########.fr       */
+/*   Created: 2021/11/02 17:20:52 by pnoutere          #+#    #+#             */
+/*   Updated: 2021/11/17 11:10:04 by pnoutere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
+# include <fcntl.h>
 
 typedef struct s_list
 {
@@ -93,4 +94,5 @@ void	ft_free_array(char **str);
 char	**ft_new_array(char **array, int len);
 int		ft_word_length(char const *str, char c);
 int		ft_nbrlen(long nb);
+int		ft_abs(int n);
 #endif
